@@ -23,7 +23,7 @@ const fetchButton = document.getElementById('fetchButton');
                     img.alt = data.name;
                     
                     const name = document.createElement('h2');
-                    name.textContent = data.name;
+                    name.textContent = data.name.charAt(0).toUpperCase() + data.name.slice(1);
 
                     container.appendChild(name);
                     container.appendChild(img);
