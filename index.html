@@ -5,14 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokeDex</title>
     <script src ="index.js" defer></script> 
+    <link rel="stylesheet" href="index.css">
+
 </head>
 <body>
-    <h1>PokeDex</h1>
-    
-    <input type='text' id='pokeSearch' placeholder="Type Pokemon name or ID!">
-    <button id = "fetchButton">Choose a Pokemon!</button>
-    
-    <div id="dataContainer"></div>
-
+    <div class="grid-container">
+        <div class="grid-item">
+            <h1>PokeDex</h1>
+        </div>
+        
+        <div class="grid-item">
+            <input type='text' id='pokeSearch' placeholder="Type Pokemon name or ID!">
+        </div>
+        <div class="grid-item">
+            <button id = "fetchButton">Choose a Pokemon!</button>
+        </div>
+        
+        <div id="dataContainer"></div>
+    </div>
 </body>
 </html>
