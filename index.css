@@ -1,18 +1,30 @@
 .grid-container{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 100px);
     gap: 10px;
+    background-color: yellow;
 }
 
 .grid-item{
+    display:flex;
+    justify-content: center;
+    align-items: center;
     background-color: lightblue;
     padding:20px;
     text-align: center;
 }
 
-img{
+#dataContainer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    transform: scale(5, 5)
+    align-items: center;
+    margin-top: 20px;
+}
+
+#dataContainer img {
+    transform: scale(3);
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
