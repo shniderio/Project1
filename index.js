@@ -1,6 +1,6 @@
 const pokeInput = document.getElementById('pokeSearch');
 const fetchButton = document.getElementById('fetchButton');
-const topTen = 'https://pokeapi.co/api/v2/pokemon/?limit=10';
+const topTen = 'https://pokeapi.co/api/v2/pokemon/?limit=151';
 const topTenDiv = document.querySelector('.centered');
 
 
