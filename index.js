@@ -1,6 +1,6 @@
 const pokeInput = document.getElementById('pokeSearch');
 const fetchButton = document.getElementById('fetchButton');
-const topTen = 'https://pokeapi.co/api/v2/pokemon/?limit=1';
+const topTen = 'https://pokeapi.co/api/v2/pokemon/?limit=151';
 const topTenDiv = document.querySelector('.centered');
 const randomStarterPokemon = document.getElementById('randomStarterPokemon');
 
@@ -22,7 +22,7 @@ const topTenPokemon = async () => {
         img.alt = pokemon.name;
 
         const type = document.createElement('p');
-        type.textContent = "Type: " + pokeDetails.types.map(t => t.type.name).join(', ');
+        type.textContent = "Type: " + pokeDetails.types.map(type => type.type.name).join(', ');
 
         const statsList = document.createElement('p');
 
@@ -66,7 +66,7 @@ class PokemonData{
     getPokemonPic() {
         fetch(`https://pokeapi.co/api/v2/pokemon/${this.pokemonName}`)
             .then(response => {
-                if(!response.ok) throw new Error('Pokemon not found');
+                if(!response.ok) alert('Pokemon not found');
                 return response.json();
             })
             .then(data => {
@@ -149,7 +149,7 @@ function search(event){
     const pokemonText = pokeInput.value.trim();
 
     if(pokemonText === ''){
-        alert('Please enter a Pokemon Name!');
+        alert('Please enter a Pokemon Name or ID!');
         return;
     }
 
