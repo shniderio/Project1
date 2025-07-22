@@ -101,3 +101,18 @@ body{
 .dataContainer .containerItem.hidden{
     display: none;
 }
+
+iframe{
+    width: 640px;
+    height: 480px;
+    border: solid black;
+}
+
+.gameboy{
+    display: flex;
+    justify-content: center;
+}
+
+h2{
+    text-align: center;
+}
