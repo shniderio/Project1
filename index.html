@@ -6,9 +6,12 @@
     <title>PokeDex</title>
     <script src="index.js" defer></script> 
     <link rel="stylesheet" href="index.css">
-
 </head>
 <body>
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/pokemon-hollow');
+    </style>
+                
     <div class="grid-container">
         <div class="grid-item">
             <h1>PokeDex</h1>
@@ -17,6 +20,8 @@
         <div class="grid-item">
             <input type='text' id='pokeSearch' placeholder="Type Pokemon name or ID!">
             <button id = "fetchButton">Choose a Pokemon!</button>
+
+            <button id="randomStarterPokemon">Choose a random starter</button>
         </div>
         
         <div class="dataContainer">
@@ -34,6 +39,6 @@
     <div class="gameboy">
         <a href="http://127.0.0.1:8080" target="_blank">Click here to play!</a>
     </div>
-    
+
 </body>
 </html>

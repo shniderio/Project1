@@ -2,6 +2,7 @@ const pokeInput = document.getElementById('pokeSearch');
 const fetchButton = document.getElementById('fetchButton');
 const topTen = 'https://pokeapi.co/api/v2/pokemon/?limit=1';
 const topTenDiv = document.querySelector('.centered');
+const randomStarterPokemon = document.getElementById('randomStarterPokemon');
 
 
 const topTenPokemon = async () => {
@@ -63,7 +64,7 @@ class PokemonData{
     }
 
     getPokemonPic() {
-        fetch(`https://pokeapi.co/api/v2/pokemon/${this.pokemonName.toLowerCase()}`)
+        fetch(`https://pokeapi.co/api/v2/pokemon/${this.pokemonName}`)
             .then(response => {
                 if(!response.ok) throw new Error('Pokemon not found');
                 return response.json();
@@ -119,7 +120,28 @@ class PokemonData{
     }
 }
 
+class randomStarter extends PokemonData{
+    constructor(){
+        super('stuff');
+    }
+    getRandomStarter(){
+        let starters = [1, 4, 7];
+        const randomID = starters[Math.floor(Math.random() * starters.length)];
+        return randomID;
+    }
+}
 
+function randomThreeStarter(event){
+    event.preventDefault();
+
+    const starter =  new randomStarter();
+    const randomID = starter.getRandomStarter();
+
+    const poke = new PokemonData(randomID);
+    poke.getPokemonPic();
+}
+
+randomStarterPokemon.addEventListener('click', randomThreeStarter);
 
 function search(event){
     event.preventDefault();

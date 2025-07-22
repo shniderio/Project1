@@ -12,6 +12,7 @@ body{
 
 .grid-item{
     display:flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     background-color: lightblue;
@@ -20,6 +21,27 @@ body{
     flex-direction: column;
     border: 2px solid #333;
     border-radius: 10px;
+}
+
+.grid-item input{
+    border: 2px solid #333;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Pokemon Solid', sans-serif;
+}
+
+#fetchButton{
+    border: 2px solid #333;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-family: 'Pokemon Solid', sans-serif;
+}
+
+#randomStarterPokemon{
+    border: 2px solid #333;
+    border-radius: 10px;
+    font-family: 'Pokemon Solid', sans-serif;
 }
 
 .dataContainer {
@@ -34,6 +56,7 @@ body{
 
 .grid-container .grid-item h1{
     color: black;
+    font-family: 'Pokemon Solid', sans-serif;
 }
 
 .dataContainer img {
@@ -43,12 +66,14 @@ body{
 
 .dataContainer h2{
     color: black;
+    font-family: 'Pokemon Solid', sans-serif;
 }
 
 .dataContainer p{
     margin: 5px 0;
     font-size: 14px;
     color: black;
+    font-family: 'Pokemon Solid', sans-serif;
 }
 
 .dataContainer .containerItem{
@@ -86,6 +111,7 @@ body{
     max-width: 250px;
     text-align: center;
     place-items: center;
+    font-family: 'Pokemon Solid', sans-serif;
 }
 
 .centered .grid-item img{
@@ -115,4 +141,5 @@ iframe{
 
 h2{
     text-align: center;
+    font-family: 'Pokemon Solid', sans-serif;
 }
